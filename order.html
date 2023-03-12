@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order | MGV ARTWORKS</title>
+    <link rel="stylesheet" href="../styles/order.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+</head>
+<body>
+    <header>
+        <div class="banner">
+
+        </div>
+    </header>
+
+    <nav>
+        <a href="../index.html" class="menu-btn">Home</a>
+        <a href="../pages/artworks.html" class="menu-btn">Artworks</a>
+        <a href="../pages/order.html" class="menu-btn">Order</a>
+        <a href="../pages/pricing.html" class="menu-btn">Pricing</a>
+        <a href="../pages/contact.html" class="menu-btn">Contact Us</a>
+        <a href="#" class="menu-btn1 flex-align-right">MGV ARTWORKS</a>
+    </nav>
+    <h1>Portrait Order Form</h1>
+    <Section class="back">
+        <div class="orderform">
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone"><br><br>
+
+      <label for="order-type">Order Type:</label>
+      <select id="order-type" name="order-type"  onchange="calculatePrice()">
+        <option value="">Select</option>
+        <option value="shading-portrait">Shading Portrait</option>
+        <option value="colour-portrait">Colour Portrait</option>
+      </select><br><br>
+
+      <label for="number-of-people">Number of People:</label>
+      <input type="number" id="number-of-people" name="number-of-people" min="1" max="4" onchange="calculatePrice()"><br><br>
+
+      <label for="size">Size:</label>
+      <select id="size" name="size" onchange="calculatePrice()">
+        <option value="">Select</option>
+        <option value="A4">A4</option>
+        <option value="A3">A3</option>
+      </select><br><br>
+
+      <label for="required-by">Required By:</label>
+      <input type="date" id="required-by" name="required-by"><br><br>
+
+      <label for="checkbox-a4">Frame Required</label>
+      <input type="checkbox" id="checkbox-a4" name="checkbox-a4" onchange="calculatePrice()"><br><br>
+
+      <label for="price">Price:</label>
+      <input type="text" id="price" name="price" readonly><br><br>
+
+      <input type="submit" value="Submit">
+
+    </form>
+</div>
+</Section>
+    
+    <script>
+      function calculatePrice() {
+        var numOfPeople = document.getElementById("number-of-people").value;
+        var size = document.getElementById("size").value;
+        var requiredBy = new Date(document.getElementById("required-by").value);
+        var currentDate = new Date();
+        var pricePerPerson;
+        var totalPrice;
+
+        if (document.getElementById("order-type").value === "shading-portrait") {
+          pricePerPerson = 300;
+        } else {
+          pricePerPerson = 500;
+        }
+
+        if (size === "A4") {
+          pricePerPerson *= 2;
+        }
+
+        totalPrice = pricePerPerson * numOfPeople;
+
+        if (size === "A3") {
+          pricePerPerson *= 4;
+        }
+
+        totalPrice = pricePerPerson * numOfPeople;
+
+        if (document.getElementById("checkbox-a4").checked) {
+          if (size === "A4") {
+            totalPrice = pricePerPerson * numOfPeople + 400;
+          } else if (size === "A3") {
+            totalPrice = pricePerPerson * numOfPeople + 500;
+          }
+        } else {
+          totalPrice = pricePerPerson * numOfPeople;
+        }
+
+        document.getElementById("price").value = "Rs." + totalPrice.toFixed(2);
+      }
+    </script>
+</body>
+</html>

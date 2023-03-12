@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "San Francisco", arial, sans-serif;
+    
+}
+
+.banner {
+    background-image: url(../assets/banner.png);
+    height: 20vw;
+    min-height: 100px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+}
+
+nav {
+    background-color: #2c3034;
+    display: flex;
+    align-items: center;
+}
+
+nav .menu-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: larger;
+    margin-right: 20px;
+}
+
+nav .menu-btn1{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 10px;
+    text-align: center; 
+    font-size: larger;
+    margin-right: 20px;
+    cursor: default;
+    background-color: #775765;
+    border-radius: 100px;
+  }
+
+nav .menu-btn:hover {
+    background-color: #ddd;
+    border-radius: 10%;
+    color: purple;
+}
+
+.flex-align-right {
+    margin-left: auto;
+}
+
+.artworks h2{
+    text-align: center;
+    background: rgb(73, 73, 80);
+    background: linear-gradient(90deg, rgba(157,157,162,0.9838060224089635) 0%, rgba(214,214,241,1) 70%, rgba(189,190,190,1) 100%);
+    padding: 10px 35px;
+}
+
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+    background: #EEE;
+    border: solid 10px ;
+    background: black;
+  }
+  
+  .carousel-cell {
+    width: 33%;
+    height: 500px;
+    margin-right: 5px;
+    background: black;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    background-size: cover;
+  }
+  
+  img{
+      height: 500px;
+  }
+
+  .artworks1 , .artworks2 ,.artworks3 ,
+  .artworks4 ,.artworks5 ,.artworks6 ,.artworks7 ,.artworks8 h2{
+    text-align: center;
+    background: rgb(73, 73, 80);
+    background: linear-gradient(90deg, rgba(157,157,162,0.9838060224089635) 0%, rgba(214,214,241,1) 70%, rgba(189,190,190,1) 100%);
+    padding: 30px 35px;
+}
+/* .carousel1 {
+    background: #EEE;
+    border: solid 10px ;
+    background: black;
+  } */
+  
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 700px ){ 
+    nav{
+    flex-direction: column;
+    padding: 10px 0px;
+    }
+
+    .flex-align-right{
+       margin-left: 0;
+    }
+}

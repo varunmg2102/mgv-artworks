@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "San Francisco", arial, sans-serif;
+    
+}
+
+.banner {
+    background-image: url(../assets/banner.png);
+    height: 20vw;
+    min-height: 100px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+}
+
+nav {
+    background-color: #2c3034;
+    display: flex;
+    align-items: center;
+}
+
+nav .menu-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: larger;
+    margin-right: 20px;
+}
+
+nav .menu-btn1{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 10px;
+    text-align: center; 
+    font-size: larger;
+    margin-right: 20px;
+    cursor: default;
+    background-color: #775765;
+    border-radius: 100px;
+  }
+
+nav .menu-btn:hover {
+    background-color: #ddd;
+    border-radius: 10%;
+    color: purple;
+}
+
+.flex-align-right {
+    margin-left: auto;
+}
+body{
+    background-color: #3e3b3b;
+}
+  
+  /* Style the heading */
+  h1 {
+    text-align: center;
+    background-color: #4d514d;
+    color: white;
+    padding: 20px;
+    margin-top: 0;
+  }
+  
+  
+  /* Style the form */
+  form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #c9dff6;
+    border-radius: 2%;
+  }
+  
+  /* Style the form labels */
+  form label {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the form inputs */
+  form input,
+  form select {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the form submit button */
+  form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the form price input */
+  form input#price {
+    font-weight: bold;
+  }
+  
+  /* Style the checkbox label */
+  form label[for="checkbox-a4"] {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+  
+  /* Style the checkbox */
+  form input[type="checkbox"] {
+    margin-bottom: 20px;
+  }
+  
+  /* Add a red border to required fields when invalid */
+  form input:invalid,
+  form select:invalid {
+    border-color: red;
+  }
+  
+  /* Hide the spin buttons on number inputs */
+  form input[type="number"]::-webkit-inner-spin-button,
+  form input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Set the cursor style on number inputs */
+
+  @media screen and (max-width: 700px ){ 
+    nav{
+    flex-direction: column;
+    padding: 10px 0px;
+    }
+
+    .flex-align-right{
+       margin-left: 0;
+    }
+}
+  
+  
